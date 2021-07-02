@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "RegistrationDone";
+}
+
+<h2>Registration Done</h2>
+
+
+@if(Session["First_Name"] != null)
+            {
+                <h3> First Name @Session["First_Name"].ToString() </h3>
+            }
+
+<div class="col-md-offset-2 col-md-10">
+    <input type="submit" value="Ok" class="btn btn-default" onclick="location.href='@Url.Action("HomePage","User")'"  />
+</div>
